@@ -20,7 +20,7 @@ from customer
 where first_name = 'Willie';
 
 --What store employee (get the id) sold the most rentals (use the rental table)?
-select count(staff_id)
+select count(staff_id),staff_id
 from rental
 group by staff_id
 order by count(distinct rental_id) desc;
