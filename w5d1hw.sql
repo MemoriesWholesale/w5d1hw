@@ -9,7 +9,7 @@ from payment
 where amount between 3.99 and 5.99;
 
 --What films have exactly 7 copies? (search in inventory)
-select count(distinct film_id)
+select film_id
 from inventory
 group by film_id
 having count(film_id) = 7;
